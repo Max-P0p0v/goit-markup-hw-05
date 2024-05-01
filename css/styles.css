@@ -430,6 +430,37 @@ button {
   transform: translatey(0%);
 }
 
+/* ========== Modal Page ========== */
+
+.modal-overlay {
+}
+.modal {
+  border-radius: 4px;
+  width: 408px;
+  height: 584px;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12),
+    0 2px 1px 0 rgba(0, 0, 0, 0.2);
+  background: #fcfcfc;
+}
+.form {
+}
+.item-exit {
+}
+.svg-exit {
+}
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+.group-title {
+}
+.form-label {
+}
+.form-input {
+}
+.madal-btn {
+}
+
 /* ========== Footer Page ========== */
 
 .page-footer {
@@ -518,4 +549,53 @@ button {
   fill: #f4f4fd;
 }
 
-/*fill="#f4f4fd" style="fill: var(--color3, #f4f4fd)"*/
+.footer-container-form {
+  margin-left: 80px;
+}
+
+.footer-input-form {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #ffffff;
+  display: block;
+  margin-bottom: 16px;
+}
+
+.footer-container-formmm {
+  display: flex;
+  gap: 24px;
+}
+
+.footer-input {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 2;
+  letter-spacing: 0.04em;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+  border-radius: 4px;
+  width: 264px;
+  height: 40px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+  margin: 0;
+}
+
+.footer-email-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #ffffff;
+
+  border-radius: 4px;
+  padding: 8px 24px;
+  width: 165px;
+  height: 40px;
+  background: #4d5ae5;
+}
