@@ -480,23 +480,23 @@
         </div>
 
         <div class="footer-container-form">
-          <label for="footer-input" class="footer-input-form">Subscribe</label>
-
-          <div class="footer-container-formmm">
-            <input
-              id="footer-input"
-              type="email"
-              name="user-email"
-              class="footer-input"
-              placeholder="E-mail"
-            />
+          <p class="footer-subscribe-text">Subscribe</p>
+          <form class="footer-subscribe-form">
+            <label class="footer-subscribe-label">
+              <input
+                class="footer-subscribe-input"
+                type="email"
+                name="user-email"
+                placeholder="E-mail"
+              />
+            </label>
             <button type="submit" class="footer-email-btn">
               Subscribe
-              <svg class="footer-icon" width="24" height="24">
+              <svg class="footer-telegram-icon" width="24" height="24">
                 <use href="./images/icons.svg#icon-telegram"></use>
               </svg>
             </button>
-          </div>
+          </form>
         </div>
       </div>
     </footer>
@@ -551,7 +551,7 @@
             </div>
           </div>
 
-          <div class="input-container">
+          <div class="input-wrapper">
             <label class="call-back-form-label" for="user-email">Email</label>
             <div class="input-container">
               <input
@@ -567,7 +567,7 @@
             </div>
           </div>
 
-          <div class="input-container">
+          <div class="input-container input-comment-container">
             <label class="call-back-form-label" for="user-comment"
               >Comment</label
             >
@@ -583,12 +583,12 @@
           <div class="privacy-policy-container">
             <input
               class="call-back-form-checkbox visually-hidden"
-              id="privacy-policy"
-              name="privacy-policy"
+              id="user-privacy"
+              name="user-privacy"
               type="checkbox"
-              value="accept"
+              value="true"
             />
-            <label class="call-back-form-checkbox-label" for="privacy-policy">
+            <label class="call-back-form-checkbox-label" for="user-privacy">
               <span class="privacy-policy-checkbox-span"
                 ><svg class="icon-bird" width="10" height="8">
                   <use href="./images/icons.svg#icon-bird"></use>

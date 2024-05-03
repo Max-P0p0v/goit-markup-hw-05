@@ -514,7 +514,7 @@ button {
   background-color: #31d0aa;
 }
 
-.footer-icon {
+.footer-telegram-icon {
   fill: #f4f4fd;
 }
 
@@ -522,7 +522,7 @@ button {
   margin-left: 80px;
 }
 
-.footer-input-form {
+.footer-subscribe-text {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
@@ -532,23 +532,34 @@ button {
   margin-bottom: 16px;
 }
 
-.footer-container-formmm {
+.footer-subscribe-form {
   display: flex;
   gap: 24px;
 }
 
-.footer-input {
+.footer-subscribe-input {
   font-weight: 400;
   font-size: 12px;
   line-height: 2;
   letter-spacing: 0.04em;
   color: #ffffff;
   border: 1px solid #ffffff;
+  background-color: transparent;
   border-radius: 4px;
   width: 264px;
   height: 40px;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
   margin: 0;
+  padding-left: 16px;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footer-subscribe-input::placeholder {
+  color: #ffffff;
+}
+
+.footer-subscribe-input:focus {
+  border-color: #4d5ae5;
 }
 
 .footer-email-btn {
@@ -556,6 +567,8 @@ button {
   align-items: center;
   justify-content: center;
   gap: 16px;
+
+  font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
@@ -563,10 +576,12 @@ button {
   color: #ffffff;
 
   border-radius: 4px;
-  padding: 8px 24px;
-  width: 165px;
+  border: none;
+  min-width: 165px;
   height: 40px;
-  background: #4d5ae5;
+  padding: 8px 24px;
+  background-color: #4d5ae5;
+  cursor: pointer;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -574,10 +589,14 @@ button {
   background-color: #404bbf;
 }
 
+.footer-telegram-icon {
+  margin-left: 16px;
+}
+
 /* Modal Page */
 
 .modal-overlay {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(46, 47, 66, 0.4);
   position: fixed;
   top: 0;
   left: 0;
@@ -587,8 +606,8 @@ button {
 
   opacity: 0;
   visibility: hidden;
-  transition: opacity 1000ms cubic-bezier(0.4, 0, 0.2, 1),
-    visibility 1000ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-overlay.is-open {
@@ -602,10 +621,12 @@ button {
   background-color: #fcfcfc;
   border-radius: 4px;
   width: 408px;
+  min-height: 584px;
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   overflow-y: auto;
   margin: 0 auto;
   padding: 72px 24px 24px 24px;
@@ -617,12 +638,13 @@ button {
   right: 24px;
   width: 24px;
   height: 24px;
-  border-radius: 100%;
+  border-radius: 50%;
+  padding: 0;
   background-color: #e7e9fc;
-  fill: #2e2f42;
+
   border: 1px solid rgba(0, 0, 0, 0.1);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -630,7 +652,17 @@ button {
 
 .exit-btn:hover,
 .exit-btn:focus {
+  border: none;
   background-color: #404bbf;
+}
+
+.exit-icon {
+  fill: #2e2f42;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.exit-icon:hover,
+.exit-icon:focus {
   fill: #ffffff;
 }
 
@@ -663,11 +695,36 @@ button {
   position: relative;
 }
 
+.input-comment-container {
+  margin-bottom: 16px;
+}
+
+.call-back-form-comment {
+  width: 100%;
+  height: 120px;
+  margin-bottom: 16px;
+  padding: 8px 16px;
+  resize: none;
+  background-color: transparent;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 117%;
+  letter-spacing: 0.04em;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  color: rgba(46, 47, 66, 0.4);
+  border-radius: 4px;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.call-back-form-comment:focus {
+  border-color: #4d5ae5;
+}
+
 .call-back-form-input {
   width: 100%;
   height: 40px;
   padding-left: 38px;
-  outline: transparent;
+  background-color: transparent;
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 4px;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -690,30 +747,9 @@ button {
   fill: #4d5ae5;
 }
 
-.call-back-form-comment {
-  width: 100%;
-  height: 120px;
-  margin-bottom: 16px;
-  padding: 8px 16px;
-  resize: none;
-  outline: transparent;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 117%;
-  letter-spacing: 0.04em;
-  border: 1px solid rgba(46, 47, 66, 0.4);
-  color: rgba(46, 47, 66, 0.4);
-  border-radius: 4px;
-  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.call-back-form-comment:focus {
-  border-color: #4d5ae5;
-}
-
 .privacy-policy-container {
-  display: flex;
-  align-items: center;
+  /* display: flex;
+  align-items: center;*/
   margin-bottom: 24px;
 }
 
@@ -729,8 +765,9 @@ button {
   border: 1px solid rgba(46, 47, 66, 0.4);
   margin-right: 8px;
   background-color: none;
-  fill: none;
+  fill: transparent;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1),
     fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -744,6 +781,7 @@ button {
 .call-back-form-checkbox:checked
   + .call-back-form-checkbox-label
   .privacy-policy-checkbox-span {
+  border: none;
   background-color: #404bbf;
   fill: #f4f4fd;
 }
@@ -770,7 +808,7 @@ button {
   border-radius: 4px;
   border: none;
   padding: 16px 32px;
-  width: 169px;
+  min-width: 169px;
   height: 56px;
 
   display: block;
