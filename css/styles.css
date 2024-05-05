@@ -759,7 +759,6 @@ button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  position: relative;
   cursor: pointer;
 
   width: 16px;
@@ -775,10 +774,6 @@ button {
 }
 
 .icon-bird {
-  position: absolute;
-  left: 0;
-  top: 0;
-  transform: translate(25%, 25%);
 }
 
 .call-back-form-checkbox:checked
@@ -794,10 +789,6 @@ button {
   line-height: 117%;
   letter-spacing: 0.04em;
   color: #8e8f99;
-
-  display: inline-flex;
-  align-items: center;
-  gap: 4px;
 }
 
 .privacy-policy-link {
